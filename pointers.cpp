@@ -153,7 +153,7 @@ int main(int argc, char **argv)
 
       validCharCheck2 = !std::regex_match(grade, std::regex("^\\d$"));
 
-      if(!validCharCheck || !validCharCheck2)
+      if((!validCharCheck || !validCharCheck2) && (std::stod(grade) <= 1000.0) && (grade.length() <= 10))
       {
         student.grades[index] = std::stod(grade);
         index++;
