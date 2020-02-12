@@ -33,6 +33,7 @@ int main(int argc, char **argv)
     std::string f_name;
     std::string l_name;
     bool validCharCheck;
+    bool validCharCheck2;
 
     while(idValid == 0)
     {
@@ -150,7 +151,9 @@ int main(int argc, char **argv)
 
       validCharCheck = !std::regex_match(grade, std::regex("^\\d+\\.?\\d+$"));
 
-      if(!validCharCheck)
+      validCharCheck2 = !std::regex_match(grade, std::regex("^\\d$"));
+
+      if(!validCharCheck || !validCharCheck2)
       {
         student.grades[index] = std::stod(grade);
         index++;
