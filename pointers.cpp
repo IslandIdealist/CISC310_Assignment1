@@ -119,7 +119,7 @@ int main(int argc, char **argv)
 
       if(!validCharCheck)
       {
-        if ( std::stoi(n_assignments) > 2147483647 || std::stoi(n_assignments) < 1)
+        if ( std::stod(n_assignments) > 2147483647 || std::stod(n_assignments) < 1)
         {
           printf("Sorry, I cannot understand your answer\n");
         }
