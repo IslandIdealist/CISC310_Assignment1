@@ -42,7 +42,7 @@ int main(int argc, char **argv)
       std::getline(std::cin, id);
 
       //Researched Regular Expressions to teach myself how to use this algorithm.
-      validCharCheck = !std::regex_match(id, std::regex("[123456789]+$"));
+      validCharCheck = !std::regex_match(id, std::regex("\\d+$"));
 
       if(!validCharCheck)
       {
